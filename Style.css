@@ -1,0 +1,215 @@
+\/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #fff;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* Навигационная панель с плавными эффектами */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background: linear-gradient(135deg, #ff4d4d, #111);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.navbar .logo h1 {
+    font-size: 1.8rem;
+    color: #fff;
+    font-weight: bold;
+}
+
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.navbar nav ul li {
+    display: inline-block;
+}
+
+.navbar nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: background 0.3s, transform 0.3s;
+    position: relative;
+}
+
+.navbar nav ul li a:hover {
+    background-color: #ff4d4d;
+    transform: scale(1.1);
+}
+
+/* Главный экран */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, #ff4d4d, #000);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 5rem;
+    color: transparent;
+    background: linear-gradient(135deg, #8b0000, #ff4d4d);
+    -webkit-background-clip: text;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    color: #aaa;
+    margin-bottom: 30px;
+}
+
+.cta-buttons .button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #ff4d4d;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background 0.3s, box-shadow 0.3s, transform 0.3s;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.cta-buttons .button:hover {
+    background-color: #ff3333;
+    box-shadow: 0px 6px 15px rgba(255, 77, 77, 0.8);
+    transform: scale(1.05);
+}
+
+.cta-buttons .button:hover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 77, 77, 0.6);
+    border-radius: 25px;
+    z-index: -1;
+}
+
+/* Features */
+.features {
+    padding: 60px 40px;
+    background-color: #111;
+    border-radius: 25px;
+    margin-top: 60px;
+}
+
+.features h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #ff4d4d;
+    margin-bottom: 40px;
+}
+
+.feature-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.feature-cards .card {
+    background: #222;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    color: #fff;
+    flex: 1;
+    max-width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-cards .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.feature-cards .card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #ff4d4d;
+}
+
+.feature-cards .card p {
+    font-size: 1.1rem;
+    color: #ccc;
+}
+
+/* About Us */
+.about {
+    padding: 60px 40px;
+    background-color: #181818;
+    text-align: center;
+    border-radius: 25px;
+    margin-top: 60px;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    color: #ff4d4d;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+/* Подвал */
+footer {
+    background: #111;
+    padding: 20px;
+    text-align: center;
+    color: #777;
+}
+
+footer a {
+    color: #ff4d4d;
+    text-decoration: none;
+}
